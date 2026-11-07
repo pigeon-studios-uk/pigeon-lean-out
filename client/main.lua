@@ -21,7 +21,9 @@ local BLOCKED_CONTROLS = { 21, 22, 23, 30, 31, 36, 44, 75, 140, 141, 142, 143, 2
 local SHOOT_CONTROLS = { 24, 25, 257 }                -- attack, aim, attack 2
 local TUNE_CONTROLS = { up = 172, down = 173, left = 174, right = 175, raise = 10, lower = 11, save = 191, reset = 194 }
 
-local strings = Locales[Config.Locale] or Locales.en
+-- 'auto' follows ox_lib's language (the ox:locale convar), and English when that isn't set.
+local locale = Config.Locale == 'auto' and GetConvar('ox:locale', 'en') or Config.Locale
+local strings = Locales[locale] or Locales.en
 local prepared = LeanOut.prepare(Config, joaat)
 local unitFactor = SPEED_FACTOR[Config.SpeedUnit] or SPEED_FACTOR.mph
 
