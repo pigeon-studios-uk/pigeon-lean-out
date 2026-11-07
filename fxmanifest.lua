@@ -5,7 +5,7 @@ lua54 'yes'
 name 'pigeon-lean-out'
 author 'Pigeon Studios'
 description 'Lets passengers lean out of the window and shoot all the way round, with any weapon you allow.'
-version '1.0.0'
+version '1.1.0'
 repository 'https://github.com/pigeon-studios-uk/pigeon-lean-out'
 
 -- Pigeon Studios version registry entry, read by server/version_check.lua.
